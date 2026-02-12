@@ -1,39 +1,75 @@
 🚀 AI-Driven Customer Satisfaction Prediction System
-  A full-stack machine learning web application that predicts customer satisfaction using CatBoost and stores prediction history with authentication.
+
+
+
+
+
+
+
+
+
+
+An advanced Full-Stack Machine Learning Web Application that predicts customer satisfaction using CatBoost, with authentication and user-wise prediction history.
 
 📌 Features
 
 🔐 User Registration & Login (JWT Authentication)
+
 🤖 Customer Satisfaction Prediction (CatBoost Model)
-📊 Prediction Probability Output
+
+📊 Probability Confidence Output
+
 🗂️ User-wise Prediction History
+
 💾 SQLite Database
+
 🌐 Flask Backend + HTML/CSS/JS Frontend
 
 🛠️ Tech Stack
 Backend
+
 Flask
+
 Flask-SQLAlchemy
+
 Flask-JWT-Extended
+
 CatBoost
-SQLite
-Frontend
-HTML
-JavaScript (Fetch API)
-ML
-CatBoost Classifier
-Pandas
+
 Scikit-learn
 
+Joblib
+
+Frontend
+
+HTML5
+
+CSS3
+
+JavaScript (Fetch API)
+
+Database
+
+SQLite
+
+
 ⚙️ Installation & Setup
-1️⃣ Clone the Repository
+1️⃣ Clone Repository
 git clone https://github.com/yourusername/AI_Customer_Satisfaction_Advanced.git
 cd AI_Customer_Satisfaction_Advanced
 
-2️⃣ Create Virtual Environment (Recommended)
+2️⃣ Create Virtual Environment
+
+Windows
+
 python -m venv venv
-source venv/bin/activate      # Mac/Linux
-venv\Scripts\activate         # Windows
+venv\Scripts\activate
+
+
+Mac/Linux
+
+python -m venv venv
+source venv/bin/activate
 
 3️⃣ Install Dependencies
 pip install flask flask-sqlalchemy flask-jwt-extended catboost pandas scikit-learn joblib
@@ -41,7 +77,6 @@ pip install flask flask-sqlalchemy flask-jwt-extended catboost pandas scikit-lea
 4️⃣ Train the Model
 cd backend
 python train.py
-This creates model.pkl.
 
 5️⃣ Run the Application
 python app.py
@@ -50,22 +85,26 @@ python app.py
 http://127.0.0.1:5000/
 
 🧠 Dataset Format
-The dataset must contain:
 Quality,Delivery,Support,Price,Satisfaction
-Where:
-Quality → Service/Product Quality (1–10)
-Delivery → Delivery Experience (1–10)
-Support → Customer Support Rating (1–10)
-Price → Pricing Satisfaction (1–10)
-Satisfaction → 0 (Not Satisfied) / 1 (Satisfied)
 
-🔄 How It Works
-User registers and logs in.
-JWT token is generated.
-User enters rating values.
-CatBoost model predicts satisfaction.
-Prediction + probability stored in database.
-User can load their prediction history.
+Feature	Range	Description
+Quality	1–10	Product/Service Quality Rating
+Delivery	1–10	Delivery Experience
+Support	1–10	Customer Support Rating
+Price	1–10	Pricing Satisfaction
+Satisfaction	0/1	Target Variable
+🔍 Model Details
+
+Algorithm: CatBoostClassifier
+
+Type: Binary Classification
+
+Output:
+
+Satisfaction Prediction (0 or 1)
+
+Confidence Probability Score
 
 📜 License
-This project is for educational and academic purposes.
+
+This project is developed for academic purposes only.
