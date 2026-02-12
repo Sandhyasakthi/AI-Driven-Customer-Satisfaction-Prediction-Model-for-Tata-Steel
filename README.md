@@ -1,99 +1,123 @@
-Tata Steel AI Customer Satisfaction Prediction
-Overview
+🚀 AI-Driven Customer Satisfaction Prediction System
 
-This is an advanced AI-driven full-stack web application designed to predict customer satisfaction (CSF) for Tata Steel based on key operational factors. The system integrates a CatBoost AI model simulation, dynamic dashboards, and a professional user interface for enterprise-level demonstration.
+A full-stack machine learning web application that predicts customer satisfaction using CatBoost and stores prediction history with authentication.
 
-The platform helps evaluate operational efficiency, raw material security, customer-centricity, and sustainability, providing actionable insights through interactive analytics.
+📌 Features
 
-Features
+🔐 User Registration & Login (JWT Authentication)
 
-User Authentication: Signup and Login system with email and password.
+🤖 Customer Satisfaction Prediction (CatBoost Model)
 
-Session Management: Secure session-based login.
+📊 Prediction Probability Output
 
-Dashboard: Creative, interactive KPI dashboard with animated cards and AI model status.
+🗂️ User-wise Prediction History
 
-Analytics: AI-driven customer satisfaction prediction panel with dynamic results and confidence display.
+💾 SQLite Database
 
-Dark Mode: Toggle light/dark theme for professional visualization.
+🌐 Flask Backend + HTML/CSS/JS Frontend
 
-Responsive UI: Clean and modern interface using HTML, CSS, and Flask templates.
+🛠️ Tech Stack
 
-SQLite Database: Lightweight storage for user credentials.
+Backend
 
-Technologies Used
+Flask
 
-Backend: Python, Flask
+Flask-SQLAlchemy
 
-Frontend: HTML, CSS, JavaScript
+Flask-JWT-Extended
 
-Database: SQLite
+CatBoost
 
-AI Simulation: CatBoost (simulation of predictions; can integrate full model)
+SQLite
 
-Libraries: Flask, SQLite3
+Frontend
 
-Installation & Setup
+HTML
 
-Clone the repository
+JavaScript (Fetch API)
 
-git clone <your-repo-url>
-cd tata_steel_prediction
+ML
+
+CatBoost Classifier
+
+Pandas
+
+Scikit-learn
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/yourusername/AI_Customer_Satisfaction_Advanced.git
+cd AI_Customer_Satisfaction_Advanced
+
+2️⃣ Create Virtual Environment (Recommended)
+python -m venv venv
+source venv/bin/activate      # Mac/Linux
+venv\Scripts\activate         # Windows
+
+3️⃣ Install Dependencies
+pip install flask flask-sqlalchemy flask-jwt-extended catboost pandas scikit-learn joblib
+
+4️⃣ Train the Model
+cd backend
+python train.py
 
 
-Install dependencies
+This creates model.pkl.
 
-pip install flask
-
-
-Run the application
-
+5️⃣ Run the Application
 python app.py
 
+6️⃣ Open in Browser
+http://127.0.0.1:5000/
 
-Open in browser
+🧠 Dataset Format
 
-http://127.0.0.1:5000
+The dataset must contain:
 
-Folder Structure
-tata_steel_prediction/
-│
-├── app.py             # Main Flask application
-├── database.db        # SQLite database (auto-created)
-├── templates/         # HTML templates
-│   ├── base.html
-│   ├── login.html
-│   ├── signup.html
-│   ├── dashboard.html
-│   └── analytics.html
-└── static/
-    └── css/
-        └── style.css
+Quality,Delivery,Support,Price,Satisfaction
 
-Usage
 
-Signup using email and password.
+Where:
 
-Login to access the dashboard.
+Quality → Service/Product Quality (1–10)
 
-View KPI metrics and AI model status.
+Delivery → Delivery Experience (1–10)
 
-Navigate to Analytics to simulate customer satisfaction predictions.
+Support → Customer Support Rating (1–10)
 
-Toggle dark mode for better visualization.
+Price → Pricing Satisfaction (1–10)
 
-Future Enhancements
+Satisfaction → 0 (Not Satisfied) / 1 (Satisfied)
 
-Integrate actual CatBoost AI model for real predictions.
+🔄 How It Works
 
-Add charts and graphs for historical data visualization.
+User registers and logs in.
 
-Implement admin panel and role-based access.
+JWT token is generated.
 
-Enable report generation in PDF or Excel format.
+User enters rating values.
 
-Deploy on cloud platforms for enterprise access.
+CatBoost model predicts satisfaction.
 
-License
+Prediction + probability stored in database.
 
-This project is open-source and free to use for educational purposes.
+User can load their prediction history.
+
+📸 Future Improvements
+
+Add Charts & Visualization
+
+Deploy on Render/Heroku
+
+Use PostgreSQL instead of SQLite
+
+Add Model Accuracy Display
+
+Improve UI with Bootstrap or React
+
+👩‍💻 Author
+
+Sandhya
+
+📜 License
+
+This project is for educational and academic purposes.
