@@ -85,37 +85,6 @@ Tools
 
 ---
 
-## Project Structure
-tata-steel-ai-project
-│
-├── app.py
-├── requirements.txt
-├── README.md
-│
-├── config
-│ └── db.py
-│
-├── models
-│ └── predictor.py
-│
-├── routes
-│ ├── auth_routes.py
-│ └── prediction_routes.py
-│
-├── templates
-│ ├── login.html
-│ ├── signup.html
-│ ├── dashboard.html
-│ └── predict.html
-│
-├── static
-│ └── style.css
-│
-└── model
-└── catboost_model.cbm
-
----
-
 ## Features
 
 User Authentication  
